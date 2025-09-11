@@ -92,7 +92,7 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
       </div>
       <div className="w-full h-full flex gap-1">
         <Key id="0">0</Key>
-        <Key id="Decimal" disabled>
+        <Key id="Decimal">
           .
         </Key>
         <Key id="Delete">
