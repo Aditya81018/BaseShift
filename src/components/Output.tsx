@@ -18,7 +18,12 @@ export default function Output({
 }: OutputProps) {
   return (
     <div onClick={onClick} className="flex flex-col border-b-2">
-      <div className={cn("text-sm", active ? "opacity-100" : "opacity-50")}>
+      <div
+        className={cn(
+          "text-sm font-bold uppercase",
+          active ? "opacity-100" : "opacity-50"
+        )}
+      >
         Base {base} {active && <Dot className="inline -ml-2 -my-1" />}
       </div>
       <div className="text-2xl h-8 overflow-x-auto uppercase">{value}</div>

@@ -32,7 +32,9 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key id="F" disabled={layoutOfBase < 16}>
           F
         </Key>
-        <Key id="AC">AC</Key>
+        <Key id="AC" highlighted>
+          AC
+        </Key>
       </div>
       <div className="w-full h-full flex gap-1">
         <Key id="A" disabled={layoutOfBase < 16}>
@@ -44,7 +46,7 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key id="C" disabled={layoutOfBase < 16}>
           C
         </Key>
-        <Key disabled id="Parentheses">
+        <Key disabled id="Parentheses" highlighted>
           <Parentheses />
         </Key>
       </div>
@@ -58,7 +60,7 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key id="9" disabled={layoutOfBase < 10}>
           9
         </Key>
-        <Key id="Divide">
+        <Key id="Divide" highlighted>
           <Divide />
         </Key>
       </div>
@@ -72,7 +74,7 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key id="6" disabled={layoutOfBase < 8}>
           6
         </Key>
-        <Key id="Multiply">
+        <Key id="Multiply" highlighted>
           <X />
         </Key>
       </div>
@@ -86,19 +88,17 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key id="3" disabled={layoutOfBase < 8}>
           3
         </Key>
-        <Key id="Minus">
+        <Key id="Minus" highlighted>
           <Minus />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
         <Key id="0">0</Key>
-        <Key id="Decimal">
-          .
-        </Key>
-        <Key id="Delete">
+        <Key id="Decimal">.</Key>
+        <Key id="Delete" highlighted>
           <Delete />
         </Key>
-        <Key id="Plus">
+        <Key id="Plus" highlighted>
           <Plus />
         </Key>
       </div>
