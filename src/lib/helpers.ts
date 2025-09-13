@@ -32,7 +32,6 @@ export function toBase10(number: string, fromBase: number) {
   for (let i = 0; i < args.length; i++) {
     let value = parseInt(args[i], fromBase);
     sum += value * Math.pow(fromBase, index - i - 1)
-    console.log(value, sum)
   }
 
   return sum;

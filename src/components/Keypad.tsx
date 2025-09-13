@@ -23,82 +23,86 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
       }}
     >
       <div className="w-full h-full flex gap-1">
-        <Key id="D" disabled={layoutOfBase < 16}>
+        <Key variant="number" id="D" disabled={layoutOfBase < 16}>
           D
         </Key>
-        <Key id="E" disabled={layoutOfBase < 16}>
+        <Key variant="number" id="E" disabled={layoutOfBase < 16}>
           E
         </Key>
-        <Key id="F" disabled={layoutOfBase < 16}>
+        <Key variant="number" id="F" disabled={layoutOfBase < 16}>
           F
         </Key>
-        <Key id="AC" highlighted>
+        <Key variant="clear" id="AC">
           AC
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
-        <Key id="A" disabled={layoutOfBase < 16}>
+        <Key variant="number" id="A" disabled={layoutOfBase < 16}>
           A
         </Key>
-        <Key id="B" disabled={layoutOfBase < 16}>
+        <Key variant="number" id="B" disabled={layoutOfBase < 16}>
           B
         </Key>
-        <Key id="C" disabled={layoutOfBase < 16}>
+        <Key variant="number" id="C" disabled={layoutOfBase < 16}>
           C
         </Key>
-        <Key disabled id="Parentheses" highlighted>
+        <Key variant="special" disabled id="Parentheses">
           <Parentheses />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
-        <Key id="7" disabled={layoutOfBase < 8}>
+        <Key variant="number" id="7" disabled={layoutOfBase < 8}>
           7
         </Key>
-        <Key id="8" disabled={layoutOfBase < 10}>
+        <Key variant="number" id="8" disabled={layoutOfBase < 10}>
           8
         </Key>
-        <Key id="9" disabled={layoutOfBase < 10}>
+        <Key variant="number" id="9" disabled={layoutOfBase < 10}>
           9
         </Key>
-        <Key id="Divide" highlighted>
+        <Key variant="operator" id="Divide">
           <Divide />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
-        <Key id="4" disabled={layoutOfBase < 8}>
+        <Key variant="number" id="4" disabled={layoutOfBase < 8}>
           4
         </Key>
-        <Key id="5" disabled={layoutOfBase < 8}>
+        <Key variant="number" id="5" disabled={layoutOfBase < 8}>
           5
         </Key>
-        <Key id="6" disabled={layoutOfBase < 8}>
+        <Key variant="number" id="6" disabled={layoutOfBase < 8}>
           6
         </Key>
-        <Key id="Multiply" highlighted>
+        <Key variant="operator" id="Multiply">
           <X />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
-        <Key id="1" disabled={layoutOfBase < 2}>
+        <Key variant="number" id="1" disabled={layoutOfBase < 2}>
           1
         </Key>
-        <Key id="2" disabled={layoutOfBase < 8}>
+        <Key variant="number" id="2" disabled={layoutOfBase < 8}>
           2
         </Key>
-        <Key id="3" disabled={layoutOfBase < 8}>
+        <Key variant="number" id="3" disabled={layoutOfBase < 8}>
           3
         </Key>
-        <Key id="Minus" highlighted>
+        <Key variant="operator" id="Minus">
           <Minus />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
-        <Key id="0">0</Key>
-        <Key id="Decimal">.</Key>
-        <Key id="Delete" highlighted>
+        <Key variant="number" id="0">
+          0
+        </Key>
+        <Key variant="special" id="Decimal">
+          .
+        </Key>
+        <Key variant="special" id="Delete">
           <Delete />
         </Key>
-        <Key id="Plus" highlighted>
+        <Key variant="operator" id="Plus">
           <Plus />
         </Key>
       </div>

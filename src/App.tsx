@@ -1,5 +1,3 @@
-import { ModeToggle } from "@/components/mode-toggle";
-import { ThemeProvider } from "@/components/theme-provider";
 import Output from "./components/Output";
 import Keypad from "./components/Keypad";
 import type { Base, KeyID } from "./lib/types";
@@ -76,42 +74,39 @@ export default function App() {
   }, [eq10]);
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <ModeToggle />
-      <div className="w-screen h-svh flex flex-col justify-end gap-2 p-2">
-        <div>
-          <Output
-            active={selectedBase === 2}
-            base={2}
-            value={eq2}
-            answer={shiftTo(answer, 10, 2)}
-            onClick={() => setSelectedBase(2)}
-          />
-          <Output
-            active={selectedBase === 8}
-            base={8}
-            value={eq8}
-            answer={shiftTo(answer, 10, 8)}
-            onClick={() => setSelectedBase(8)}
-          />
-          <Output
-            active={selectedBase === 10}
-            base={10}
-            value={eq10}
-            answer={shiftTo(answer, 10, 10)}
-            onClick={() => setSelectedBase(10)}
-          />
-          <Output
-            active={selectedBase === 16}
-            base={16}
-            value={eq16}
-            answer={shiftTo(answer, 10, 16)}
-            onClick={() => setSelectedBase(16)}
-          />
-        </div>
-
-        <Keypad layoutOfBase={selectedBase} onKeyPress={onKeyPress} />
+    <div className="w-screen h-svh flex flex-col justify-end gap-2 p-2 bg-gradient-to-br from-gray-900 via-gray-800 to-slate-900">
+      <div>
+        <Output
+          active={selectedBase === 2}
+          base={2}
+          value={eq2}
+          answer={shiftTo(answer, 10, 2)}
+          onClick={() => setSelectedBase(2)}
+        />
+        <Output
+          active={selectedBase === 8}
+          base={8}
+          value={eq8}
+          answer={shiftTo(answer, 10, 8)}
+          onClick={() => setSelectedBase(8)}
+        />
+        <Output
+          active={selectedBase === 10}
+          base={10}
+          value={eq10}
+          answer={shiftTo(answer, 10, 10)}
+          onClick={() => setSelectedBase(10)}
+        />
+        <Output
+          active={selectedBase === 16}
+          base={16}
+          value={eq16}
+          answer={shiftTo(answer, 10, 16)}
+          onClick={() => setSelectedBase(16)}
+        />
       </div>
-    </ThemeProvider>
+
+      <Keypad layoutOfBase={selectedBase} onKeyPress={onKeyPress} />
+    </div>
   );
 }
