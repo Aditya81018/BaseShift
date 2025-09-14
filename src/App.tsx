@@ -52,6 +52,9 @@ export default function App() {
       case "Plus":
         if (eq !== "" && eq.at(-1) !== " ") newEq = eq + " + ";
         break;
+      case "Equals":
+        newEq = answer;
+        break;
       default:
         newEq = eq + id;
         break;

@@ -21,7 +21,7 @@ export type KeyID =
   | "Minus"
   | "Multiply"
   | "Divide"
-  | "Parentheses"
+  | "Equals"
   | "AC";
 
 export type Base = 2 | 8 | 10 | 16

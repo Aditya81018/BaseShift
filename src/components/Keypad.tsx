@@ -1,4 +1,12 @@
-import { Delete, Divide, Minus, Parentheses, Plus, X } from "lucide-react";
+import {
+  Delete,
+  Divide,
+  Equal,
+  Minus,
+  Parentheses,
+  Plus,
+  X,
+} from "lucide-react";
 import Key from "./Key";
 import type { Base, KeyID } from "@/lib/types";
 
@@ -46,8 +54,8 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key variant="number" id="C" disabled={layoutOfBase < 16}>
           C
         </Key>
-        <Key variant="special" disabled id="Parentheses">
-          <Parentheses />
+        <Key variant="operator" id="Divide">
+          <Divide />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
@@ -60,8 +68,9 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key variant="number" id="9" disabled={layoutOfBase < 10}>
           9
         </Key>
-        <Key variant="operator" id="Divide">
-          <Divide />
+
+        <Key variant="operator" id="Multiply">
+          <X />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
@@ -74,8 +83,9 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key variant="number" id="6" disabled={layoutOfBase < 8}>
           6
         </Key>
-        <Key variant="operator" id="Multiply">
-          <X />
+
+        <Key variant="operator" id="Minus">
+          <Minus />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
@@ -88,8 +98,8 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key variant="number" id="3" disabled={layoutOfBase < 8}>
           3
         </Key>
-        <Key variant="operator" id="Minus">
-          <Minus />
+        <Key variant="operator" id="Plus">
+          <Plus />
         </Key>
       </div>
       <div className="w-full h-full flex gap-1">
@@ -102,8 +112,8 @@ export default function Keypad({ onKeyPress, layoutOfBase = 16 }: KeypadProps) {
         <Key variant="special" id="Delete">
           <Delete />
         </Key>
-        <Key variant="operator" id="Plus">
-          <Plus />
+        <Key variant="special" id="Equals">
+          <Equal />
         </Key>
       </div>
     </div>
